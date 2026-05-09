@@ -1,0 +1,158 @@
+body {
+  background-color: #6cc0a2;
+}
+
+.forms {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 120em;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 7em;
+  margin-bottom: 7em;
+  -webkit-box-shadow: 0 0 20px #3aa27e;
+  box-shadow: 0 0 20px #3aa27e;
+  padding: 3em 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.4em;
+  width: 100%;
+}
+
+.form-title {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.forms table {
+  color: white;
+}
+
+input {
+  color: #fff;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  width: max(27em, 20vw);
+  padding: 10px;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+textarea {
+  width: max(27em, 20vw);
+  height: max(10em);
+  resize: none;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 10px;
+}
+
+input.mesazhi {
+  padding: 2em;
+  padding-left: 10px;
+}
+
+.button {
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 1em 3em;
+  width: auto;
+  border-radius: 25px;
+  margin-top: 1em;
+}
+
+.reg {
+  margin: 9px 12px;
+  color: white;
+}
+
+.reg a {
+  color: rgb(31, 118, 175);
+}
+
+.reg a:hover {
+  color: white;
+}
+
+.button:hover {
+  background: #01df93;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+label {
+  color: white;
+}
+
+::-webkit-file-upload-button {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  color: grey;
+  padding: 0.5em;
+  cursor: pointer;
+}
+::-webkit-file-upload-button:hover {
+  background: #01df93;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown {
+  background: white;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: grey;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.dropdown1 {
+  background: white;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: grey;
+  padding: 0.5em 1.3em;
+  cursor: pointer;
+}
+
+@media (max-width: 380px) {
+  .forms {
+    margin-top: 3em;
+    margin-bottom: 0;
+  }
+
+  textarea {
+    width: 15em;
+    height: 6em;
+  }
+
+  input {
+    width: 15em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auth {
+    top: 193px;
+  }
+}
