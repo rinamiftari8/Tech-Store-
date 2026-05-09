@@ -18,9 +18,10 @@ function validimiLogin() {
 }
 
 function validimiSignUp() {
-  const emriREGEX = /^[A-Za-z]+$/
-  const emailREGEX = /^[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}$/
-  const passREGEX = /^[A-Z][A-Za-z0-9@$!%*?&]*[a-z][A-Za-z0-9@$!%*?&]*[0-9][A-Za-z0-9@$!%*?&]*$/
+  const emriREGEX = /^[A-Za-z]+$/;
+  const emailREGEX = /^[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+  const passREGEX =
+    /^[A-Z][A-Za-z0-9@$!%*?&]*[a-z][A-Za-z0-9@$!%*?&]*[0-9][A-Za-z0-9@$!%*?&]*$/;
   let emriSUF = document.SignUpForm.name;
   let uNameSUF = document.SignUpForm.uName;
   let emailSUF = document.SignUpForm.email;
@@ -68,7 +69,9 @@ function validimiSignUp() {
     return false;
   }
   if (!passREGEX.test(passSUF.value)) {
-    alert("Password must contasin one lowercase letter, one digit and the first letter must be Uppercase!");
+    alert(
+      "Password must contasin one lowercase letter, one digit and the first letter must be Uppercase!",
+    );
     passSUF.focus();
     return false;
   }
@@ -95,7 +98,8 @@ function validimiForgotPassword() {
 }
 
 function validimiResetPassword() {
-  const passREGEX = /^[A-Z][A-Za-z0-9@$!%*?&]*[a-z][A-Za-z0-9@$!%*?&]*[0-9][A-Za-z0-9@$!%*?&]*$/;
+  const passREGEX =
+    /^[A-Z][A-Za-z0-9@$!%*?&]*[a-z][A-Za-z0-9@$!%*?&]*[0-9][A-Za-z0-9@$!%*?&]*$/;
   let newPass = document.ResetPasswordForm.new_password;
   let confirmPass = document.ResetPasswordForm.confirm_password;
 
@@ -110,7 +114,9 @@ function validimiResetPassword() {
     return false;
   }
   if (!passREGEX.test(newPass.value)) {
-    alert("Password must contain one lowercase letter, one digit and start with an uppercase letter!");
+    alert(
+      "Password must contain one lowercase letter, one digit and start with an uppercase letter!",
+    );
     newPass.focus();
     return false;
   }
@@ -129,8 +135,8 @@ function validimiResetPassword() {
 }
 
 function validimiContactForm() {
-  const emriREGEX = /^[A-Za-z ]+$/
-  const emailREGEX = /^[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}$/
+  const emriREGEX = /^[A-Za-z ]+$/;
+  const emailREGEX = /^[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
   let emriCF = document.ContactForm.name;
   let emailCF = document.ContactForm.email;
   let msgFieldCF = document.ContactForm.msgField;
@@ -165,7 +171,7 @@ function validimiContactForm() {
 }
 
 function validimiShtimiProduktit() {
-  const qmimiREGEX = /^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/
+  const qmimiREGEX = /^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/;
   let qmimi = document.shtoProduktin.cmimiPd;
 
   if (!qmimiREGEX.test(qmimi.value)) {
@@ -184,8 +190,8 @@ function validimiShtimiProduktit() {
 }
 
 function validimiPerditesoTeDhenat() {
-  const textREGEX = /^[A-Za-zÇçËëËÇ]+$/
-  const telREGEX = /^04[3,4,5,6,8,9]\d{6}$/
+  const textREGEX = /^[A-Za-zÇçËëËÇ]+$/;
+  const telREGEX = /^04[3,4,5,6,8,9]\d{6}$/;
   let emriPTD = document.perditesoTeDhenat.emri;
   let mbiemriPTD = document.perditesoTeDhenat.mbiemri;
   let telPTD = document.perditesoTeDhenat.nrKontaktit;
@@ -215,13 +221,17 @@ function validimiPerditesoTeDhenat() {
   }
 
   if (telPTD.value == "") {
-    alert("Ju lutem te vendosni nje numer kontakti per shkak te kontaktimit nga postieri ne rast porosie!");
+    alert(
+      "Ju lutem te vendosni nje numer kontakti per shkak te kontaktimit nga postieri ne rast porosie!",
+    );
     telPTD.focus();
     return false;
   }
   if (!telREGEX.test(telPTD.value)) {
-    alert("Numri i telefonit duhte te jet ne formatin 04ONNNNNN ku O eshte identifikimi i numrit te operatorit IPKO ose Vala" +
-      " N eshte numer nga 0 deri 9 pra Pjesa tjeter e numrit!");
+    alert(
+      "Numri i telefonit duhte te jet ne formatin 04ONNNNNN ku O eshte identifikimi i numrit te operatorit IPKO ose Vala" +
+        " N eshte numer nga 0 deri 9 pra Pjesa tjeter e numrit!",
+    );
     telPTD.focus();
     return false;
   }
